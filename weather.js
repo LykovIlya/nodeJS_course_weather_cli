@@ -3,7 +3,9 @@ import { getArgs } from "./helpers/args.js";
 import { printHelp, printSuccess, printError } from "./services/log.service.js";
 import { saveKeyValue, TOKEN_DICTIONARY } from "./services/storage.service.js";
 import { getWeather } from "./services/api.service.js";
+import * as dotenv from "dotenv";
 
+dotenv.config();
 
 const saveToken = async (token) => {
 	if (!token.length) {
