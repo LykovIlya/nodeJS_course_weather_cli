@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import { getArgs } from "./helpers/args.js";
-import { printHelp, printSuccess, printError } from "./services/log.service.js";
+import { printHelp, printSuccess, printError, printWeather } from "./services/log.service.js";
 import { saveKeyValue, TOKEN_DICTIONARY } from "./services/storage.service.js";
 import { getWeather } from "./services/api.service.js";
 import * as dotenv from "dotenv";
@@ -60,21 +60,6 @@ const initCLI = () => {
 		return saveToken(args.t);
 	}
 	getForcast();
-};
-
-const printWeather = (weather) => {
-	const {
-		weather: [{
-			description
-		}],
-		main: {
-			temp,
-			temp_min,
-			temp_max,
-		},
-		name
-	} = weather;
-	console.log(`${name}, погода:\n${description}\nТекущая температура: ${temp}C\n`);
 };
 
 initCLI();

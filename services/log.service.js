@@ -19,4 +19,19 @@ const printHelp = () => {
 	`));
 };
 
-export { printError, printSuccess, printHelp };
+const printWeather = (weather) => {
+	const {
+		weather: [{
+			description
+		}],
+		main: {
+			temp,
+			temp_min,
+			temp_max,
+		},
+		name
+	} = weather;
+	console.log(chalk.bgYellow(`${name}, погода:\n${description},\nТекущая температура: ${temp}C.\n`));
+};
+
+export { printError, printSuccess, printHelp, printWeather };
