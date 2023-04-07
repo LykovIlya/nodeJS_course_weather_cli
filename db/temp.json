@@ -1,0 +1,29 @@
+{
+	"coord": { "lon": 50, "lat": 53 },
+	"weather": [
+		{
+			"id": 802,
+			"main": "Clouds",
+			"description": "переменная облачность",
+			"icon": "03d"
+		}
+	],
+	"base": "stations",
+	"main": {
+		"temp": 7.19,
+		"temp_min": 7.19,
+		"temp_max": 7.19,
+		"humidity": 62,
+		"sea_level": 1023,
+		"grnd_level": 1009
+	},
+	"visibility": 10000,
+	"wind": { "speed": 7.02, "deg": 48, "gust": 8.11 },
+	"clouds": { "all": 31 },
+	"dt": 1680850138,
+	"sys": { "country": "RU", "sunrise": 1680832847, "sunset": 1680881002 },
+	"timezone": 14400,
+	"id": 499068,
+	"name": "Самарская область",
+	"cod": 200
+}
